@@ -748,9 +748,8 @@ class Mega:
                 file_info = os.stat(temp_output_file.name)
                 # Edit status message
                 try:
-                  dlstats_msg.edit(f"**Downloading Wait ...** \n\n➩ **File Name:** `{file_name}` \n➩ **File Size:** `{humanize.naturalsize(file_size)}` \n➩ **Downloaded:** `{humanize.naturalsize(file_info.st_size)}` \n\n**@SPACE_X_BOTS | @SOURCES_CODES**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Cancel Mega DL", callback_data="cancel")]]))
-                  logger.info('%s of %s downloaded', file_info.st_size,
-                            file_size)
+                  dlstats_msg.edit(f"**Downloading Wait ...** \n\n➩ **File Name:** `{file_name}` \n➩ **File Size:** `{humanize.naturalsize(file_size)}` \n➩ **Downloaded:** `{humanize.naturalsize(file_info.st_size)}` \n\n**@SPACE_X_BOTS | @SOURCES_CODES**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴄᴀɴᴄᴇʟ", callback_data="D3")]]))
+                  #logger.info('%s of %s downloaded', file_info.st_size, file_size)
                 except MessageNotModified:
                   continue
                 except FloodWait as e:
